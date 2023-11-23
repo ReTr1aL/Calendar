@@ -31,3 +31,8 @@ ul {
     display: none;
   }
 }
+@media (max-width: 580px) {
+  .ant-picker-datetime-panel {
+    flex-direction: column;
+  }
+}

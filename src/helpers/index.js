@@ -20,7 +20,9 @@ export const getListData = (value, eventList) => {
         date3.getDate()
       );
       return (
-        day1.getTime() === day2.getTime() || day3.getTime() === day2.getTime()
+        day1.getTime() === day2.getTime() ||
+        day3.getTime() === day2.getTime() ||
+        (day2.getTime() > day1.getTime() && day2.getTime() < day3.getTime())
       );
     }
     return areDatesOnSameDay(dateA, dateB, dateC);

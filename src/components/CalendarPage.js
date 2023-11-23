@@ -22,6 +22,12 @@ const CalendarPage = () => {
     e.stopPropagation();
     navigate(URLS_LOCAL.EVENT + item.id);
   }
+  function handleSelect(date, info) {
+    if (info.source === "date") {
+      setCurrentDay(date);
+      navigate(URLS_LOCAL.DAY + date.$d);
+    }
+  }
   const cellRender = (current, info) => {
     if (info.type === "date")
       return (
@@ -56,13 +62,7 @@ const CalendarPage = () => {
           Add event
         </Button>
       </div>
-      <Calendar
-        onSelect={(date) => {
-          setCurrentDay(date);
-          navigate(URLS_LOCAL.DAY + date.$d);
-        }}
-        cellRender={cellRender}
-      />
+      <Calendar onSelect={handleSelect} cellRender={cellRender} />
       {eventInfo && (
         <EventPreviewModal eventList={eventList} modal={eventInfo} />
       )}

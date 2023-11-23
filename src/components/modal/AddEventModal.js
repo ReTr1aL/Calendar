@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { AddEvent } from "../../store/actions/calendarActions";
 import { useNavigate } from "react-router";
 import { URLS_LOCAL } from "../../routes/constants";
+import { toast } from "react-toastify";
 const { RangePicker } = DatePicker;
 
 const AddEventModal = ({ modal }) => {
@@ -20,6 +21,7 @@ const AddEventModal = ({ modal }) => {
       description: values.description ?? "",
     };
     dispatch(AddEvent(newEvent));
+    toast.success("Event added");
     navigate(URLS_LOCAL.CALENDAR);
   };
   return (

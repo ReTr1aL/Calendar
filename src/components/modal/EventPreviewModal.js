@@ -8,6 +8,7 @@ import DeleteModal from "./DeleteModal";
 import { DeleteEvent, EditEvent } from "../../store/actions/calendarActions";
 import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
+import { toast } from "react-toastify";
 const { RangePicker } = DatePicker;
 
 const EventPreviewModal = ({ modal, eventList }) => {
@@ -27,11 +28,13 @@ const EventPreviewModal = ({ modal, eventList }) => {
       description: values.description ?? "",
     };
     dispatch(EditEvent(newEvent));
+    toast.success("Event edited");
     navigate(URLS_LOCAL.CALENDAR);
   };
   function handleDelete() {
     setDeleteModal(false);
     dispatch(DeleteEvent(currentEvent));
+    toast.success("Event deleted");
     navigate(URLS_LOCAL.CALENDAR);
   }
 

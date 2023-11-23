@@ -35,4 +35,8 @@ ul {
   .ant-picker-datetime-panel {
     flex-direction: column;
   }
+  .ant-picker-dropdown {
+    position: fixed!important;
+    top: 10px!important;
+  }
 }

@@ -1,6 +1,6 @@
 export const URLS_LOCAL = {
-  CALENDAR: "/",
-  EVENT: "/event/",
-  DAY: "/day/",
-  ADD_EVENT: "/add/event",
+  COMPANY: "/",
+  COMPANY_EDIT: "/company-edit/",
+  COMPANY_SINGLE: "/company/",
+  ADD_COMPANY: "/add/company",
 };

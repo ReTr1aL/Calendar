@@ -10,7 +10,7 @@ const DeleteModal = ({ modal, setModal, handleSubmit }) => {
       onOk={handleSubmit}
       onCancel={() => setModal(false)}
     >
-      Do you really want to delete the event?
+      Do you really want to delete the company?
     </Modal>
   );
 };

@@ -1,16 +1,16 @@
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import calendar from "./calendarReducer";
+import company from "./companyReducer";
 
 const rootPersistConfig = {
   key: "root",
   storage: storage,
-  whitelist: ["calendar"],
+  whitelist: ["company"],
 };
 
 const rootReducer = combineReducers({
-  calendar,
+  company,
 });
 
 export default persistReducer(rootPersistConfig, rootReducer);

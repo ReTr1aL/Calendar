@@ -1,9 +1,9 @@
 import { GET } from "../constants";
-import { GetEvents } from "../../store/actions/calendarActions";
+import { GetEvents } from "../../store/actions/companyActions";
 import { toast } from "react-toastify";
 import { Request } from "../axios";
 
-export const GetEventsRequest = () => {
+export const GetCompanyRequest = () => {
   return (dispatch) => {
     Request(
       GET,

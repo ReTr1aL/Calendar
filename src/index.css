@@ -19,24 +19,23 @@ ul {
   padding: 0;
   margin: 0;
 }
-.ant-drawer-header-title {
-  flex-direction: row-reverse;
-}
 .ant-picker-calendar-header {
   padding: 12px !important;
 }
-
-@media (max-width: 1023px) {
-  .ant-picker-calendar-date-content .events {
-    display: none;
-  }
+.post_wrapper {
+  max-width: 1280px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
 }
-@media (max-width: 580px) {
-  .ant-picker-datetime-panel {
+
+@media (max-width: 550px) {
+  .button_header {
+    display: flex;
     flex-direction: column;
   }
-  .ant-picker-dropdown {
-    position: fixed!important;
-    top: 10px!important;
+  .button_header button:nth-child(2) {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }
